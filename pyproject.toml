@@ -1,0 +1,10 @@
+[project]
+name = "pruebatecnica"
+version = "0.1.0"
+description = "dependencies toeml for the PruebaTecnica repo"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "google-cloud-bigquery>=3.41.0",
+    "requests>=2.33.1",
+]
