@@ -2,7 +2,6 @@ from google.cloud import bigquery
 
 import requests
 
-
 class ApiDownloader:
     # as i get to choose the api, i'll define the url as a class parameter, bc it won't change.
     def __init__(self, url):
@@ -23,6 +22,7 @@ class ApiDownloader:
 
 class BigQueryUploader:
     # same logic as above, the project, dataset and table ids are parameters of the class, bc they won't change during the execution.
+    # we assume the table is already created in BigQUery.
     def __init__(self, project_id, dataset_id, table_id):
         self.client = bigquery.Client(project=project_id)
         self.table_id = f"{project_id}.{dataset_id}.{table_id}"
